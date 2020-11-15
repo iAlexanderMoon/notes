@@ -1,0 +1,38 @@
+leaflet map api
+
+Tile providers:
+
+Why not google maps:
+	data projection reasons
+	licensing
+	stigma
+	custom format
+	expensive
+
+Openstreet map 
+	free but not great.. but may be good enough for our purposes
+	geojson open format
+	
+mapbox maps
+	core maintainers of leaflet
+	beautify maps
+	not free cost
+	geojson open format
+	
+	
+	
+	var handler = new HttpClientHandler();
+handler.ServerCertificateCustomValidationCallback =
+    (message, certificate, chain, sslPolicyErrors) => true;
+	
+	
+	
+	public static void IgnoreBadCertificates()
+{
+    System.Net.ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(AcceptAllCertifications);
+}
+
+private static bool AcceptAllCertifications(object sender, System.Security.Cryptography.X509Certificates.X509Certificate certification, System.Security.Cryptography.X509Certificates.X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors)
+{
+    return true;
+}

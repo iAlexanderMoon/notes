@@ -1,0 +1,35 @@
+https://github.com/aspnet/Scaffolding/issues/776
+
+Can't use Directory.Build.props with scaffolders.
+
+dotnet tool install -g dotnet-aspnet-codegenerator
+
+Remove Directory.Build.props
+dotnet build 
+
+now you will have bin and obj files in the project directory
+
+et voila: 
+	dotnet aspnet-codegenerator identity -h 
+
+It works!
+
+
+dotnet aspnet-codegenerator identity -dc MyWeb.Data.ApplicationDbContext --files "Account.Register;Account.Login"
+
+dotnet aspnet-codegenerator identity -dc MyWeb.Data.ApplicationDbContext --files "Account.Register;Account.Login"
+
+
+dotnet
+
+ConfSystem.IO.FileNotFoundException: 
+Could not load file or assembly 'Microsoft.AspNetCore.Razor.Runtime, Version=3.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. 
+The system cannot find the file specified.
+
+Ended up being and ERROR with BuildProps
+
+
+
+
+
+

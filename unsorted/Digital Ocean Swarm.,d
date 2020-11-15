@@ -1,0 +1,30 @@
+Digital Ocean
+
+Pipelines Fine. 
+
+Having an issue swarm running out of swarm space.
+
+Space - $5 a month for
+Machine - 16 GB: 
+
+
+Digital Ocean Droplet - Docker CE and Docker Compose
+We don't need swarm or kubernetes... So to control updates on the droplet for automation!
+
+
+Github or Bitbucket has the source code.
+
+Agent watching Github or Bitbucket for Builds published to DockerHub Registry.
+Dockerhub is the best place to build for the dockerregistry because it is ONTOP of the registry... in my opinion why push around built images.
+So
+
+Dockerhub 
+- can it watch bitbucket
+- can it watch github
+
+https://docs.docker.com/docker-hub/builds/
+https://docs.docker.com/docker-hub/builds/link-source/
+
+New Images published to Dockerhub... now how do we update images on Digital Ocean
+
+

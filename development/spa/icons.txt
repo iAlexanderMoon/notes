@@ -1,0 +1,8 @@
+favicon.ico 16 x 16 pixels
+icon.jpg	64 x 64
+icon.png	32 x 32
+
+
+https://www.emergeinteractive.com/insights/detail/the-essentials-of-favicons/
+
+

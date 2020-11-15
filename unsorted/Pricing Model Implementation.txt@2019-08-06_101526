@@ -1,0 +1,112 @@
+Install ProphetX on PC !!! include excel add in !!!
+Installed for 1 user only.
+Setup PC to connect or Order Computer... we either have to set it up at the order desk or setup a virtual machine we can RDP into?
+
+
+Model Implementation Notes:
+-------------------------------------------------------
+
+Startup ProphetX and login. (it must be running for model to receive up to date information).
+
+Workbook Startup Macro: 
+* Sets the Effective Date to today
+* Locks the Dashboard spreadsheet
+
+Futures to use is determined based on the Effective Date
+
+
+* Add datatables to excel using the prophetx datatables
+* Note:  If you move a table (a table is consider the results of your add-in request) or copy it, the index will change and you will no longer be able to go back and change the information using the double-click on the first column heading as described above.
+
+Dashboard:
+* Effective Date:
+ * Very important to set the working date (typically this is set to today) 
+ * Maybe it should ALWAYS be set to today?
+ 
+* CME LHF are listed on the dashboard
+ * The 10 CME LHF subsequent to the effective date are on the dashboard
+ * The LHF MUST be registered on the LHFutures tab (THEY MUST BE IN ORDER OF EXPIRATION)
+ * LAST prices are looked up on the LHQuotes tab by the ProphetX code
+ * Prices can be overriden (manually)
+ - Prices should be automatically overriden for publishing opening or closing prices
+
+* Macros on the Dashboard Sheet for week selection
+ 
+
+Dates Generation:
+* Dates Generation creates weeks 4 to 52 starting from the effective date are on the dashboard
+
+Register:
+* Registration of CME Lean Hog Futures, Month, Description and Symbols for lookups including ProphetX and Bloomberg
+* Registration o CME Canadian Dollar Futures, Month, Description and Symbols for lookups including ProphetX and Bloomberg
+* New Futures MUST be added to the tab as the time comes
+* ProphetX Symbol and Bloomberg Symbol MUST be encoded registered for each Future
+- it looks like we need to register the futures hear instead of using prophetx values for date lookups
+ 
+LHQuotes:
+* Connected to ProphetX showing the Open/Close High Low Last and Volume of trading on LHFutures
+* ProphetX table MUST be maintained by adding additional futures as they become available
+ 
+ 
+FX Forward Points:
+
+ 
+=BFxForward("CADUSD",D2-1,"AskPoints")/10000
+
+Where to get the spot rate.
+Where to get teh FxForward AskPoints.
+
+CADUSD.BNPF
+
+CADUSD
+	BGN
+
+	Bloomberg Generic prices (BGN) are a single-security composite derived from electronic dealer contribution. Both executable and indicative levels are considered.
+	FXCM
+	
+
+ 
+ 
+Prices:
+* This sheet should NOT be edited
+* This sheet pulls the prices from the dashboard
+ * which ones is derived on the sheet
+* This sheet pulls the weeks from the date generation
+* This sheet pulls data from Parameters
+* This sheet pulls data from AvgDailyBasis
+* This sheet pulls data from RiskFactor
+   
+ 
+ 
+ * Do we want the 1 month ago and 1 week ago prices in the model? I'd say no so I removed them.
+ * What do we want to do about the FX Quotes?
+ 
+
+History for 3 years... means  
+
+ 
+ 
+Web Services Tools and Addins
+ 
+VBA-Web
+
+	VBA-Web (formerly Excel-REST) makes working with complex webservices and APIs easy with VBA on Windows and Mac. 
+	License: MIT
+	https://github.com/VBA-tools/VBA-Web
+
+VBA-JSON
+
+	JSON conversion and parsing for VBA (Windows and Mac Excel, Access, and other Office applications). 
+	License: MIT
+	https://github.com/VBA-tools/VBA-JSON
+	
+VBA-UTC
+
+	UTC and ISO 8601 date conversion and parsing for VBA (Windows and Mac Excel, Access, and other Office applications).
+	License: MIT
+	https://github.com/VBA-tools/VBA-UTC
+
+
+
+
+

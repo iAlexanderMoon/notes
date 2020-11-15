@@ -1,0 +1,2 @@
+ne of my favorite T-SQL challenges is to fill in missing (NULL) values.  This is a technique for cleaning data sets where a blank entry meant ‘continue with the value for this column that was in the previous non-blank row’: blanks being represented by NULLs.
+https://www.red-gate.com/simple-talk/sql/t-sql-programming/filling-in-missing-values-using-the-t-sql-window-frame/
