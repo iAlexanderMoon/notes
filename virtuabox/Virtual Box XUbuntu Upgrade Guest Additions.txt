@@ -1,0 +1,13 @@
+Unfortunately VBox Guest Additions don't automatically upgrade when a new version of Virtual Box is deployed.
+
+New guest additions was mounted automatically by virtualbox with the new iso in this case
+
+```
+	cd /media/moon/VBox_GAs_6.1.12
+	sudo ./VBoxLinuxAdditions.run
+```
+
+This will build and install the new kernel modules.
+
+Reboot.
+

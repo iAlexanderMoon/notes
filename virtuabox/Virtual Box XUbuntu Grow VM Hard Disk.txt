@@ -1,0 +1,24 @@
+Re-size a VirtualBox disk, where Linux is the guest OS and Windows is the host OS.
+This was done with 
+
+## Increase Virtual Disk Size: Virtual Box 6+
+
+1 - Copy locations, clone, backup as needed
+2 - Shut down VirtualBox.
+3 - Open Windows Command Prompt
+4 - cd <location of vdi file>
+5 - "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifymedium disk <vdi file name>.vdi --resize <megabytes>
+
+Example: if Vbox is on the path you don't need to use the full path the VBoxManage
+```
+	"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifymedium disk development.vdi --resize 60000
+```
+
+## Grow Linux Partition: Xubuntu 20.04 using Gparted GUI the partition was ext4
+
+1 - Boot into the VM
+2 - Start Gparted
+3 - Select Disk and Choose Re-size
+4 - Change the size and click the checkmark
+
+Done.
