@@ -67,6 +67,22 @@ __ARGS can be sent to the make devimage target when building the devcontainer in
 * id -g
 * getent group docker | awk -F: '{printf "%d", $3}'
 
+
+```sh
+    USER_NAME=`whoami`
+    USER_UID=`id -u`
+    USER_GID=`id -g`
+    DOCKER_GID=`getent group docker | awk -F: '{printf "%d", $$3}'`
+    
+	docker build --rm \
+	--build-arg USER_NAME=${USER_NAME} \
+	--build-arg USER_UID=${USER_UID} \
+	--build-arg USER_GID=${USER_GID} \
+	--build-arg DOCKER_GID=${DOCKER_GID} \
+	-t ${DEVIMAGE} \
+	-f images/dev.Dockerfile images
+```
+
 __Lots of times the remote isn't found... restart the watcher and try the picker again.__
 
 __Break points won't take__
