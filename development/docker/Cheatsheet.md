@@ -29,12 +29,20 @@ docker container prune
 docker container prune --filter "until=24h"
 ```
 
+* Clean up volumes not attached to a container
+* Clean up volumes not attached to a container ignoring those with a keep label assigned
+
+```sh
+docker volume prune
+docker volume prune --filter "label!=keep"
+```
 
 ## Want a nearly complete restart?
 
-Stop everything and prune everything
+* Prune everything
+* Prune everyting and volumes
 
 ```sh
-docker container prune
-docker image prune -a
+docker system prune
+docker system prune --volumes
 ```

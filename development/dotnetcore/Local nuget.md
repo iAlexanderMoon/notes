@@ -34,3 +34,10 @@ Set the environment variable NUGET
 
 NUGET_PACKAGES 	Path to use for the global-packages folder as described on Managing the global packages and cache folders.
 https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-environment-variables
+
+
+
+
+What about ln -s data/nuget in projects to /working/nuget shared space so we don't need to be repeated?
+
+What about node_modules similarily have a local cache that is searched?
